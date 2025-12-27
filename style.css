@@ -1,0 +1,290 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+} 
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.footer {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.animated-text {
+  animation: fadeIn 1.5s ease-in-out;
+  font-family: "Arial", sans-serif;
+  font-size: 18px;
+
+  background-color: #f9f9f9;
+  padding: 5px 10px;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+.user-profile {
+  text-align: center;
+}
+
+.avatar-container {
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+  margin-bottom: 10px;
+  position: relative;
+  animation: bounce 1s infinite alternate;
+}
+
+.avatar {
+  display: block;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin: 0 auto;
+}
+
+.btn-view-profile {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #dd1818;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn-view-profile:hover {
+  background-color: #333333;
+  color: #ffffff;
+}
+
+/* Animation keyframes */
+@keyframes bounce {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+body {
+  background-image: url("images/media.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+}
+
+input {
+  background-image: url("images/bg.png");
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05),
+    0 15px 40px rgba(0, 0, 0, 0.1);
+  color: white;
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+
+input::placeholder {
+  color: #bbb;
+}
+
+input:focus {
+  outline: none;
+}
+
+input:hover {
+  background-image: url("images/bg.png");
+  transform: translateY(-5px);
+}
+
+
+.card {
+  background-image: linear-gradient(to right, #e9f5ff 0%, rgb(255, 236, 236) 100%);
+  border-radius: 20px;
+  box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05),
+    0 15px 40px rgb(41, 41, 39);
+  display: flex;
+  padding: 3rem;
+  max-width: flex;
+}
+
+.avatar {
+  border: 5px solid linear-gradient(to top, #000000 0%, #fc0000 100%);
+  border-radius: 100%;
+  height: 200px;
+  width: 200px;
+}
+
+.user-info {
+  color: linear-gradient(to right, #243949 0%, #517fa4 100%);
+  margin-left: 10rem;
+}
+
+.user-info ul {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  padding: 0;
+  max-width: 400px;
+}
+
+.user-info ul li {
+  display: flex;
+  align-items: center;
+}
+
+.user-info ul li strong {
+  font-size: 1 rem;
+  margin-left: 0.5rem;
+}
+
+.repo {
+  background-image: linear-gradient(to right, #333333, #dd1818);
+  border-radius: 5px;
+  display: inline-block;
+  color: white;
+  font-size: 0.7rem;
+  padding: 0.25rem 0.5rem;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  text-decoration: none;
+}
+
+.repo:hover {
+  background-image: linear-gradient(to right, #dd1818, #333333);
+  transform: translateY(-5px);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+.wrapper {
+  display: flex;
+}
+
+.wrapper .static-txt {
+  color: #fff;
+  font-size: 50px;
+  font-weight: 400;
+}
+
+.wrapper .dynamic-txts {
+  margin-left: 15px;
+  height: 90px;
+  line-height: 90px;
+  overflow: hidden;
+}
+
+.dynamic-txts li {
+  list-style: none;
+  color: #FC6D6D;
+  font-size: 60px;
+  font-weight: 500;
+  position: relative;
+  top: 0;
+  animation: slide 12s steps(4) infinite;
+}
+
+@keyframes slide {
+  100% {
+    top: -360px;
+  }
+}
+
+.dynamic-txts li span {
+  position: relative;
+  margin: 5px 0;
+  line-height: 90px;
+}
+
+.dynamic-txts li span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(to right, #833ab4, #fd1d1d, #fcb045);
+  border-left: 0.5px solid #FC6D6D;
+  animation: typing 3s steps(10) infinite;
+}
+
+@keyframes typing {
+
+  40%,
+  60% {
+    left: calc(100% + 30px);
+  }
+
+  100% {
+    left: 0;
+  }
+}
+
+.social-links {
+  margin-bottom: 15px;
+}
+
+.social-links .github{
+  background-image: url(images/gita.png);
+  background-size: cover;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  cursor: pointer;
+  margin: 0 10px;
+}
+
+.social-links .instagram{
+  background-image: url(images/insta.png);
+  background-size: cover;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  cursor: pointer;
+  margin: 0 10px;
+}
+.social-links .github:hover {
+  transform: translateX(-10px);
+}
+.social-links .instagram:hover {
+  transform: translateX(10px);
+}
